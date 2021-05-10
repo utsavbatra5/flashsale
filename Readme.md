@@ -4,6 +4,7 @@ The aim of the project is to handle race condition for 10 products of X in a fla
 **Running the project**
 
 go build . -t flashsale
+
 go run flashsale
 
 **Algorithm for race condition**
