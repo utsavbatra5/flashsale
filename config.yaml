@@ -1,0 +1,31 @@
+stock:
+  - product: "X"
+    quantity  : 10
+
+name: "flashSale"
+
+basicauthorization: Basic dXNlcjpwYXNz
+
+ports:
+  - key: stock
+    port: 8001
+  - key: buy
+    port: 8002
+  - key: addCart
+    port: 8003
+
+cartstore: "inMem"
+
+cartdbconfig:
+  - key: sql
+    url: http://localhost:6500
+  - key: dynamodb
+    url: http://localhost:6501
+
+stockstore: "inMem"
+
+stockdbconfig:
+    - key: sql
+      url: http://localhost:6500
+    - key: dynamodb
+      url: http://localhost:6501
