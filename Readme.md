@@ -1,5 +1,11 @@
 The aim of the project is to handle race condition for 10 products of X in a flash sale where millions of users can cocurrently checkout for the same.
 
+
+**Running the project**
+
+go build . -t flashsale
+go run flashsale
+
 **Algorithm for race condition**
 
 The race condition has been handled using timed semaphores. Semaphores have been created using channels in golang and at max 10 semaphores can be allocated. Only when a payment fails, 1 semaphore resource is released and another user is allowed to try payment.
